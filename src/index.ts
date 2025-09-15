@@ -56,3 +56,20 @@ app.listen(8000, () => {
     console.log( `A porta que está rodando é 8000`);
 });
 export default app;
+
+
+// tarefa: criar uma rota get para produtos que retirne a lista de produtos do banco de dados
+// o produto deve ter id, nome preco, urlfoto, descricao
+//deve se criar uma tabela no banco de dados AIVEN para armazenar produtos 
+//a resposta tem que ser um array de produtos em formato JSON 
+//crie um codigo sql para criar a tabela de produtos 
+/* 
+CREATE TABLE produtos (
+id INT AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(100) NOT NULL,
+preco DECIMAL(10, 2) NOT NULL,
+urlfoto VARCHAR(255) NOT NULL,
+descricao TEXT
+);
+faz pelo menos 3 inscriçoes nessa tabela 
+*/
