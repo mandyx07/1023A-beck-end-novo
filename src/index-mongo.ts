@@ -16,6 +16,12 @@ app.get('/estudantes', async (req: Request, res: Response) => {
    
 });
 
+app.post('/estudantes', async (req: Request, res: Response)=>{
+    const estudante = req.body
+    const resultado = await db.collection('estudantes')
+    .insertOne(estudante)
+    res.status(201).json({...estudante,_id: resultado.insertedId})
+})
 
 app.listen(8000, () => {
     console.log('servidor rodando em 8000');
